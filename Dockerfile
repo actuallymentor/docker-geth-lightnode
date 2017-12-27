@@ -7,13 +7,13 @@ LABEL maintainer="actuallymentor"
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install deps
-RUN apt-get update
-RUN apt-get install -y software-properties-common
+RUN apt-get update \
+	apt-get install -y software-properties-common
 
 # Install geth
-RUN add-apt-repository -y ppa:ethereum/ethereum
-RUN apt-get update
-RUN apt-get install geth
+RUN add-apt-repository -y ppa:ethereum/ethereum \
+	apt-get update \
+	apt-get install geth
 
 # Geth specffic configs
 EXPOSE 30303/tcp 30303/udp
