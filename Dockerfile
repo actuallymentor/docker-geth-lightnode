@@ -16,4 +16,4 @@ RUN add-apt-repository -y ppa:ethereum/ethereum && apt-get update && apt-get ins
 EXPOSE 30303/tcp 30303/udp
 
 # When running the container
-CMD geth --port=30303 --lightserv=90 --datadir=/root/etherchain
+CMD geth --fast --port=30303 --lightserv=90 --datadir=/root/etherchain
